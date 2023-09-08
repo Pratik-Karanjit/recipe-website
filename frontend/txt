@@ -1,0 +1,43 @@
+<!-- <div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active">
+                  <NavLink to={"/"} style={{ marginRight: "20px" }}>
+                    Recipes
+                  </NavLink>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  <NavLink to={"/quick-bites"} style={{ marginRight: "20px" }}>
+                    Quick-Bites
+                  </NavLink>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  <NavLink to={"/favourites"} style={{ marginRight: "20px" }}>
+                    Favourites
+                  </NavLink>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div> -->

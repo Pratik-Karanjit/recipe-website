@@ -1,20 +1,14 @@
-import React from 'react'
-import { Outlet, Route, Routes } from 'react-router-dom'
-import HomePage from './Project Components/HomePage'
-import ContactPage from './Project Components/ContactPage'
+import React from "react";
+import MyNavLinks from "./Project Components/MyNavLinks";
+import MyRoutes from "./Project Components/MyRoutes";
 
 const Project = () => {
   return (
     <div>
-    <Routes>
-        <Route path = "/" element = {<div><Outlet></Outlet></div>}>
-            <Route index element = {<HomePage></HomePage>}></Route>
-            <Route path = "contact" element = {<ContactPage></ContactPage>}></Route>
-            </Route>
-    </Routes>
-
+      <MyNavLinks></MyNavLinks>
+      <MyRoutes></MyRoutes>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

@@ -1,16 +1,21 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import MyNavLinks from "./MyNavlink";
 
 const HomePage = () => {
-    let navigate = useNavigate()
+  let navigate = useNavigate();
   return (
     <div>
-        Home <br></br>
-        <button onClick={(e) => {
-            navigate('contact')
-        }}>Navigate to Contact</button>
+      Home <br></br>
+      <button
+        onClick={(e) => {
+          navigate("contact");
+        }}
+      >
+        Navigate to Contact
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
