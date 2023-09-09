@@ -1,7 +1,12 @@
 /* navbar.css */
+/* .home{
+  background-image: "bg.jpg";
+  background-size: cover;
+} */
 .nav-link{
     transition: all 0.1s;
     font-weight: bold;
+
 }
 .nav-link:hover{
     border-bottom: 2px solid black;
@@ -9,9 +14,9 @@
 
 
 /* Style the navbar background */
-.navbar {
-    background-color: #a80000; /* Change the background color to your desired color */
-  }
+/* .navbar {
+    background-color: transparent; /* Change the background color to your desired color */
+  /* } */ */
   
   /* Style the navbar brand (logo) */
   .navbar-brand {
@@ -25,6 +30,8 @@
     margin-right: 20px;
     text-decoration: none; /* Remove underline from the link */
     font-size: 16px; /* Adjust the font size as needed */
+    color: white;
+
   }
   
   /* Style the active link */
@@ -41,5 +48,9 @@
     margin-right: 20px;
     text-decoration: none; /* Remove underline from the link */
     font-size: 16px; /* Adjust the font size as needed */
+    color: white;
+
 
   }
+ 
+ 

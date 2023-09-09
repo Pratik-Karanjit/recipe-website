@@ -3,11 +3,29 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import Recipe from "./Recipe";
 import Favourites from "./Favourites";
 import QuickBites from "./QuickBites";
+import HomePage from "./HomePage";
 
 const MyRoutes = () => {
   return (
     <div>
       <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Outlet></Outlet>
+            </div>
+          }
+        >
+          <Route
+            index
+            element={
+              <div>
+                <HomePage></HomePage>
+              </div>
+            }
+          ></Route>
+        </Route>
         <Route
           path="/recipe"
           element={

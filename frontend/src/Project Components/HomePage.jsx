@@ -1,19 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import MyNavLinks from "./MyNavlink";
-
+import "./navbar.css";
+import "./home.css";
 const HomePage = () => {
-  let navigate = useNavigate();
   return (
-    <div>
-      Home <br></br>
-      <button
-        onClick={(e) => {
-          navigate("contact");
-        }}
-      >
-        Navigate to Contact
-      </button>
+    <div className="home">
+      <div className="homebg">
+        <picture className="hero">
+          <source srcset="back2.jpg" type="" />
+          <img src="bg.jpg" class="img-fluid img-thumbnail" alt="image" />
+        </picture>
+      </div>
+      {/* hello */}
     </div>
   );
 };

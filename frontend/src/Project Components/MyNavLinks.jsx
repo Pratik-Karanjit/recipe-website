@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./navbar.css"
+import "./navbar.css";
 
 const MyNavLinks = () => {
   return (
-    <div >
-      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div>
+      <nav class="navbar navbar-expand-lg nav-bar shadow-5-strong bg-transparent fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand"><img src="Pakau.svg" alt="logo" style={{height:"50px"}}/></a>
+          <a class="navbar-brand">
+            <img src="Pakau.svg" alt="logo" style={{ height: "90px" }} />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -19,7 +21,7 @@ const MyNavLinks = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active">
