@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const MyNavLinks = () => {
+  // const [collapse, setCollapse] = useState(false);
+  // const changeBackground = () => {
+  //   if (window.scrollY >   0) {
+  //     setCollapse(true);
+  //   } else {
+  //     setCollapse(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", changeBackground);
+  // console.log(window.scrollY);
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg nav-bar shadow-5-strong bg-transparent fixed-top">
+    <div className="header">
+      <nav class="navbar navbar-expand-lg nav-bar shadow-5-strong bg-transparent fixed-top ">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <img src="Pakau.svg" alt="logo" style={{ height: "90px" }} />
+            {/* <img src="Pakau.svg" alt="logo" style={{ height: "90px" }} /> */}
           </a>
           <button
             class="navbar-toggler"
@@ -21,27 +31,32 @@ const MyNavLinks = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div
+            className="collapse active navbar-collapse  "
+            // {
+            //   collapse ? "collapse:active" : "collapse navbar-collapse"
+            // }
+            id="navbarSupportedContent"
+            style={{ paddingLeft: "15vh" }}
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0  ">
               <li class="nav-item">
                 <a class="nav-link active">
-                  <NavLink to={"/recipe"} style={{ marginRight: "20px" }}>
+                  <NavLink to={"/recipe"} style={{ marginRight: "25vh" }}>
                     Recipes
                   </NavLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">
-                  <NavLink to={"/quick-bites"} style={{ marginRight: "20px" }}>
+                  <NavLink to={"/quick-bites"} style={{ marginRight: "25vh" }}>
                     Quick-Bites
                   </NavLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">
-                  <NavLink to={"/favourites"} style={{ marginRight: "20px" }}>
-                    Favourites
-                  </NavLink>
+                  <NavLink to={"/favourites"}>Favourites</NavLink>
                 </a>
               </li>
 
@@ -61,7 +76,7 @@ const MyNavLinks = () => {
               </button>
             </form> */}
 
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
               <li>
                 <NavLink to={"/sign-up"} style={{ marginRight: "20px" }}>
                   Sign in

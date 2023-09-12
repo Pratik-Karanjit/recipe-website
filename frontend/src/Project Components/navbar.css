@@ -1,56 +1,41 @@
-/* navbar.css */
-/* .home{
-  background-image: "bg.jpg";
-  background-size: cover;
-} */
+
 .nav-link{
     transition: all 0.1s;
     font-weight: bold;
+    
 
 }
 .nav-link:hover{
     border-bottom: 2px solid black;
 }
-
-
-/* Style the navbar background */
-/* .navbar {
-    background-color: transparent; /* Change the background color to your desired color */
-  /* } */ */
-  
-  /* Style the navbar brand (logo) */
-  .navbar-brand {
-    color: rgb(138, 59, 59); /* Change the text color to your desired color */
-    font-size: 24px; /* Adjust the font size as needed */
-  }
-  
-  /* Style the navigation links */
-  .nav-link {
-    color: rgb(26, 9, 9); /* Change the text color to your desired color */
-    margin-right: 20px;
-    text-decoration: none; /* Remove underline from the link */
-    font-size: 16px; /* Adjust the font size as needed */
+.nav-link {
+    color: rgb(26, 9, 9);
+    margin-right: 130px;
+    text-decoration: none; 
+    font-size: 16px; 
     color: white;
-
   }
-  
-  /* Style the active link */
-  /* .nav-link.active {
-    font-weight: bold; 
-
-  } */
-  
-  
-  
-  /* Style the Sign in and Log-in links */
-  .navbar-nav li a {
-    color: rgb(0, 0, 0); /* Change the text color to your desired color */
+.navbar-nav li a {
+    color: rgb(0, 0, 0);
     margin-right: 20px;
-    text-decoration: none; /* Remove underline from the link */
-    font-size: 16px; /* Adjust the font size as needed */
+    text-decoration: none; 
+    font-size: 16px; 
     color: white;
-
-
   }
+/* .collapse{
+  background-color: transparent;
+}
+.collapse.active{
+  background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
+} */
+
+.hidenav.active{
+  background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
+  
+}
+ 
+
+  
+  
  
  

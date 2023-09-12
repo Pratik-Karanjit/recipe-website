@@ -4,6 +4,7 @@ import Recipe from "./Recipe";
 import Favourites from "./Favourites";
 import QuickBites from "./QuickBites";
 import HomePage from "./HomePage";
+import HOE from "./HOE";
 
 const MyRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const MyRoutes = () => {
             element={
               <div>
                 <HomePage></HomePage>
+                {/* <HOE></HOE> */}
               </div>
             }
           ></Route>

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Favourites = () => {
-  return (
-    <div>
-      fav
-    </div>
-  )
-}
+  return <div>fav</div>;
+};
 
-export default Favourites
+export default Favourites;
