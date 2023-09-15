@@ -29,13 +29,62 @@
   background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
 } */
 
-.hidenav.active{
+/* .hidenav.active{
   background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
   
-}
- 
+} */
+/* .anibar{
+  background-color: transparent;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: sticky;
+ /* top: 0; */
+ /* z-index: 999; */
 
-  
-  
+/* } */ 
+/* .collapse{
+  background-color: black;
+} */
+/* .anibar.active{
+  background-color:#4E598C;
+  /* background-image: url("/public/Pakau.svg"); */
+/* } */ 
+/* .collapse.active{
+  background-color: red;
+} */
+/* .navBar a.active {
+    border-bottom-color: white;
+} */
  
+/* .header{
+  background-color: black;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 999;
+
+} */
+/* .header.active{
+  background-color:#4E598C;
+} */
+  .navbar{
+   
+      background-color: transparent;
+   
+  }
+ .navbar.active{
+  background-color:#4E598C;
+}
+.logo{
+  visibility: hidden;
+}
+.logo.active{
+  visibility: visible;
+}
+
  

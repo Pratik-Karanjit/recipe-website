@@ -3,22 +3,29 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const MyNavLinks = () => {
-  // const [collapse, setCollapse] = useState(false);
-  // const changeBackground = () => {
-  //   if (window.scrollY >   0) {
-  //     setCollapse(true);
-  //   } else {
-  //     setCollapse(false);
-  //   }
-  // };
-  // window.addEventListener("scroll", changeBackground);
-  // console.log(window.scrollY);
+  const [navBar, setNavbar] = useState(false);
+  const[logo,setLogo]= useState(false)
+  const changeBackground = () => {
+    if (window.scrollY > 20) {
+      setNavbar(true);
+      setLogo(true)
+    } else {
+      setNavbar(false);
+      setLogo(false)
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+  console.log(window.scrollY);
   return (
-    <div className="header">
-      <nav class="navbar navbar-expand-lg nav-bar shadow-5-strong bg-transparent fixed-top ">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            {/* <img src="Pakau.svg" alt="logo" style={{ height: "90px" }} /> */}
+    <div className="header navbar-expand-lg nav-bar shadow-5-strong  fixed-top ">
+      {/* <nav className={navBar ? "navBar active" : "navbar"}> */}
+      {/* <nav
+        className="navbar navbar-expand-lg nav-bar shadow-5-strong  fixed-top"
+      > */}
+      <nav className={navBar ? "navbar active" : "navbar"}>
+        <div className="container-fluid">
+        <a className= {logo ? "logo active" : "logo"}>
+            <img src="Pakau.svg" alt="logo" style={{ height: "40px" }} />
           </a>
           <button
             class="navbar-toggler"
@@ -29,12 +36,12 @@ const MyNavLinks = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
             className="collapse active navbar-collapse  "
             // {
-            //   collapse ? "collapse:active" : "collapse navbar-collapse"
+            //  { navBar ? "navBar:active" : "navbar navbar-expand-lg nav-bar shadow-5-strong  fixed-top"}
             // }
             id="navbarSupportedContent"
             style={{ paddingLeft: "15vh" }}

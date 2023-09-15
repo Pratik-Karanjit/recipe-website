@@ -1,6 +1,6 @@
 import React from "react";
-import MyNavLinks from "./Project Components/MyNavLinks";
 import MyRoutes from "./Project Components/MyRoutes";
+import MyNavLinks from "./Project Components/MyNavLinks";
 
 const Project = () => {
   return (
