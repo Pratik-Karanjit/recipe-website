@@ -4,18 +4,18 @@ import "./navbar.css";
 
 const MyNavLinks = () => {
   const [navBar, setNavbar] = useState(false);
-  const[logo,setLogo]= useState(false)
+  const [logo, setLogo] = useState(false);
   const changeBackground = () => {
     if (window.scrollY > 20) {
       setNavbar(true);
-      setLogo(true)
+      setLogo(true);
     } else {
       setNavbar(false);
-      setLogo(false)
+      setLogo(false);
     }
   };
   window.addEventListener("scroll", changeBackground);
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   return (
     <div className="header navbar-expand-lg nav-bar shadow-5-strong  fixed-top ">
       {/* <nav className={navBar ? "navBar active" : "navbar"}> */}
@@ -24,11 +24,11 @@ const MyNavLinks = () => {
       > */}
       <nav className={navBar ? "navbar active" : "navbar"}>
         <div className="container-fluid">
-        <a className= {logo ? "logo active" : "logo"}>
+          <a className={logo ? "logo active" : "logo"}>
             <img src="Pakau.svg" alt="logo" style={{ height: "40px" }} />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler bg-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -36,7 +36,7 @@ const MyNavLinks = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon  "></span>
           </button>
           <div
             className="collapse active navbar-collapse  "
