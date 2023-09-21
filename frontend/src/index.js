@@ -7,7 +7,7 @@ import Project from "./Project";
 
 ReactDOM.render(
   <BrowserRouter>
-  <Project></Project>
+    <Project></Project>
   </BrowserRouter>,
   document.getElementById("root")
 );

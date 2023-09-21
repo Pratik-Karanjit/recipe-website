@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import SignUp from "./SignUp";
 import "./navbar.css";
 
 const MyNavLinks = () => {
   const [navBar, setNavbar] = useState(false);
-  const[logo,setLogo]= useState(false)
+  const [logo, setLogo] = useState(false);
+
   const changeBackground = () => {
     if (window.scrollY > 20) {
       setNavbar(true);
-      setLogo(true)
+      setLogo(true);
     } else {
       setNavbar(false);
-      setLogo(false)
+      setLogo(false);
     }
   };
   window.addEventListener("scroll", changeBackground);
@@ -24,7 +26,7 @@ const MyNavLinks = () => {
       > */}
       <nav className={navBar ? "navbar active" : "navbar"}>
         <div className="container-fluid">
-        <a className= {logo ? "logo active" : "logo"}>
+          <a className={logo ? "logo active" : "logo"}>
             <img src="Pakau.svg" alt="logo" style={{ height: "40px" }} />
           </a>
           <button
@@ -85,9 +87,9 @@ const MyNavLinks = () => {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
               <li>
-                <NavLink to={"/sign-up"} style={{ marginRight: "20px" }}>
-                  Sign in
-                </NavLink>
+                <div>
+                  <SignUp></SignUp>
+                </div>
               </li>
 
               <li>
