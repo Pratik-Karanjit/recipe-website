@@ -6,10 +6,6 @@ import "./navbar.css";
 const MyNavLinks = () => {
   const [navBar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> c0356b0e16e80b855d1b595618f4736b57d35208
   const changeBackground = () => {
     if (window.scrollY > 20) {
       setNavbar(true);

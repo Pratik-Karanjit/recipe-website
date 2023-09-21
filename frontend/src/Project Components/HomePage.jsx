@@ -1,9 +1,9 @@
 import React from "react";
 import "./navbar.css";
 import "./home.css";
-import ItemCard from "./ItemCard";
+// import ItemCard from "./ItemCard";
 import Khau from "./Khau";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HomePage = () => {
   return (
     // <div className="home">
