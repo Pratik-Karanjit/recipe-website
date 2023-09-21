@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import SignUp from "./SignUp";
 import "./navbar.css";
+import SignUp from "./SignUp";
 
 const MyNavLinks = () => {
   const [navBar, setNavbar] = useState(false);
@@ -86,9 +86,7 @@ const MyNavLinks = () => {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
               <li>
-                <div>
-                  <SignUp></SignUp>
-                </div>
+                <SignUp></SignUp>
               </li>
 
               <li>
