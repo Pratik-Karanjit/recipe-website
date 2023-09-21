@@ -1,6 +1,9 @@
 import React from "react";
 import "./navbar.css";
 import "./home.css";
+import ItemCard from "./ItemCard";
+import Khau from "./Khau";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HomePage = () => {
   return (
     // <div className="home">
@@ -50,7 +53,7 @@ const HomePage = () => {
     <div className="home">
       <div className="homePage" style={{ backgroundImage: "url(/back2.jpg)" }}>
         <div className="color-overlay d-flex justify-content-center align-items-center">
-          <img src="Pakau.svg" alt="logo" />
+          <img className="logs" src="Pakau.svg" alt="logo" />
           <div className="search d-flex justify-content-center align-items-center">
             <form>
               <input
@@ -70,6 +73,10 @@ const HomePage = () => {
       </div>
       <section className="background d-flex justify-content-center align-items-center">
         <h1 className="heading">Discover the rich tastes of Nepal</h1>
+        {/* <Products></Products> */}
+        {/* <ItemCard img="" title="title" desc="desc"></ItemCard> */}
+        {/* <AauKhau></AauKhau> */}
+        <Khau></Khau>
       </section>
     </div>
   );

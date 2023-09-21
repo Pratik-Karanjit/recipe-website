@@ -1,0 +1,51 @@
+.row{
+    /* height: 30px; */
+    padding-left: 10px;
+     margin-top: -40vh;
+
+}
+.card button{
+    background-color: orange;
+    border:none;
+    width: 100%;
+}
+.card-title{
+    color: #4E598C;
+    font-style: bold;
+    
+}
+.card-text{
+    color:#4E598C ;
+    font-style: bold;
+    font-weight: 600;
+}
+.card{
+    border-color: orange;
+    border-radius: 50px;
+    overflow: hidden;
+    
+}
+.card {
+    width:100%;
+    transition:scale 400ms
+}
+.card:hover {
+    scale:106%
+}
+.btn{
+    font-style: bold;
+    font-weight: 600;
+}
+
+@media(max-width: 767px){
+    .row{
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 10vh;
+      margin-left: 70px;
+    }
+  
+  
+  }

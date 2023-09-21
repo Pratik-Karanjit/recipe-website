@@ -6,7 +6,10 @@ import "./navbar.css";
 const MyNavLinks = () => {
   const [navBar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c0356b0e16e80b855d1b595618f4736b57d35208
   const changeBackground = () => {
     if (window.scrollY > 20) {
       setNavbar(true);
@@ -17,7 +20,7 @@ const MyNavLinks = () => {
     }
   };
   window.addEventListener("scroll", changeBackground);
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   return (
     <div className="header navbar-expand-lg nav-bar shadow-5-strong  fixed-top ">
       {/* <nav className={navBar ? "navBar active" : "navbar"}> */}
@@ -30,7 +33,7 @@ const MyNavLinks = () => {
             <img src="Pakau.svg" alt="logo" style={{ height: "40px" }} />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler bg-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -38,7 +41,7 @@ const MyNavLinks = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon  "></span>
           </button>
           <div
             className="collapse active navbar-collapse  "
