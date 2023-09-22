@@ -5,6 +5,9 @@ import Favourites from "./Favourites";
 import QuickBites from "./QuickBites";
 import HomePage from "./HomePage";
 import HOE from "./HOE";
+import RegistrationSuccessPage from "./RegistrationSuccessPage";
+import VerifyEmailPage from "./VerifyEmail";
+import Login from "./Login";
 
 const MyRoutes = () => {
   return (
@@ -62,23 +65,16 @@ const MyRoutes = () => {
             }
           ></Route>
         </Route>
-        <Route
-          path="favourites"
-          element={
-            <div>
-              <Outlet></Outlet>
-            </div>
-          }
-        >
-          <Route
-            index
-            element={
-              <div>
-                <Favourites></Favourites>
-              </div>
-            }
-          ></Route>
+        <Route path="favourites" element={<div> <Outlet></Outlet></div>}>
+          <Route index element={<div> <Favourites></Favourites></div>}></Route>
         </Route>
+        <Route path="registration-success" element={<RegistrationSuccessPage></RegistrationSuccessPage>} />
+        <Route path="verify-email" element={<VerifyEmailPage />}querystring/>
+        <Route path = "login" element = {<Login></Login>}></Route>
+
+
+
+
       </Routes>
     </div>
   );

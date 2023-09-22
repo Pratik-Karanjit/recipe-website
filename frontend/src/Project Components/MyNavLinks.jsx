@@ -88,12 +88,6 @@ const MyNavLinks = () => {
               <li>
                 <SignUp></SignUp>
               </li>
-
-              <li>
-                <NavLink to={"/login-in"} style={{ marginRight: "20px" }}>
-                  Log-in
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>
