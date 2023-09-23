@@ -148,20 +148,20 @@ function LoginForm({ handleClose }) {
 
 function SignUp() {
   const [show, setShow] = useState(false);
-  const [isSignup, setIsSignup] = useState(true); // To track whether the signup or login section is active
+  const [activeTab, setActiveTab] = useState("signup"); // Initialize with "signup" active
 
   const handleClose = () => {
     setShow(false);
-    setIsSignup(true); // Reset to the signup section when the modal is closed
+    setActiveTab("signup"); // Reset to "signup" when the modal is closed
   };
 
   const handleShow = () => {
     setShow(true);
-    setIsSignup(true); // Show the signup section by default when the modal is opened
+    setActiveTab("signup"); // Show the signup section by default when the modal is opened
   };
 
-  const toggleSection = () => {
-    setIsSignup(!isSignup); // Toggle between signup and login sections
+  const toggleSection = (tab) => {
+    setActiveTab(tab); // Toggle between "signup" and "login" sections
   };
 
   return (
@@ -173,23 +173,37 @@ function SignUp() {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
-            {isSignup ? "Sign Up" : "Login"}
-            <Button
-              variant="link"
-              className="switch-button"
-              onClick={toggleSection}
-            >
-              {isSignup ? "Switch to Login" : "Switch to Sign Up"}
-            </Button>
+            {activeTab === "signup" ? "Sign Up" : "Login"}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {isSignup ? <RegistrationForm handleClose={handleClose} /> : <LoginForm handleClose={handleClose} />}
+          <div className="text-center">
+            <Button
+              variant={activeTab === "signup" ? "primary" : "outline-primary"}
+              onClick={() => toggleSection("signup")}
+            >
+              Switch to Sign Up
+            </Button>
+            <span className="mx-2"> {/* Add some space between the buttons */}</span>
+            <Button
+              variant={activeTab === "login" ? "primary" : "outline-primary"}
+              onClick={() => toggleSection("login")}
+            >
+              Switch to Login
+            </Button>
+          </div>
+          {/* Render the respective form based on the activeTab */}
+          {activeTab === "signup" ? (
+            <RegistrationForm handleClose={handleClose} />
+          ) : (
+            <LoginForm handleClose={handleClose} />
+          )}
         </Modal.Body>
         <Modal.Footer>{/* Empty footer */}</Modal.Footer>
       </Modal>
     </>
   );
 }
+
 
 export default SignUp;

@@ -8,6 +8,9 @@ import HOE from "./HOE";
 import RegistrationSuccessPage from "./RegistrationSuccessPage";
 import VerifyEmailPage from "./VerifyEmail";
 import Login from "./Login";
+import ForgotPassword from "./ForgotPassword";
+import ForgotPassVerification from "./ForgotPassVerification";
+import ForgotPasswordReset from "./ForgotPasswordReset";
 
 const MyRoutes = () => {
   return (
@@ -71,10 +74,9 @@ const MyRoutes = () => {
         <Route path="registration-success" element={<RegistrationSuccessPage></RegistrationSuccessPage>} />
         <Route path="verify-email" element={<VerifyEmailPage />}querystring/>
         <Route path = "login" element = {<Login></Login>}></Route>
-
-
-
-
+        <Route path = "forgot-password" element = {<ForgotPassword></ForgotPassword>}></Route>
+        <Route path = "forgot-password-verification" element = {<ForgotPassVerification></ForgotPassVerification>}></Route>
+        <Route path="forgot-password-reset" element={<ForgotPasswordReset></ForgotPasswordReset>}querystring/>
       </Routes>
     </div>
   );

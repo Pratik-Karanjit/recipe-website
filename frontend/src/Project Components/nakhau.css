@@ -123,3 +123,118 @@
   }
   
   
+
+
+
+/* Forgot password css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f5f5f5;
+}
+
+.box {
+  width: 400px;
+  padding: 20px;
+  margin-top: 2px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.box h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+
+/* CSS for Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 45px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* CSS for Form Title */
+.form-title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* CSS for Form Input Fields */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CSS for Form Select Field */
+.form-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CSS for Submit Button */
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* CSS for Error Messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* CSS for spacing between form elements */
+.form-element-spacing {
+  margin-top: 15px;
+}
+
+/* CSS for additional padding and finishing touch */
+.form-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.form-input,
+.form-select {
+  padding: 12px;
+}
+
+.form-button {
+  padding: 12px 20px;
+}
+
+body {
+  background-color: #f3f6ff; /* Light-colored background */
+}
+.forgot-password {
+  color: blue; /* Change the color to your preferred color */
+  margin-bottom: 10px; /* Add spacing between the "Forgot Password?" section and the login button */
+}
