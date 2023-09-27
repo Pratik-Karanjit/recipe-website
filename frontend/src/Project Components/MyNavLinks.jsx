@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import SignUp from "./SignUp";
+import { Button } from "react-bootstrap";
+import { getLoginInfo } from "../utils/loginInfo";
 
 const MyNavLinks = () => {
+  let navigate = useNavigate()
   const [navBar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
   const changeBackground = () => {
@@ -17,6 +20,22 @@ const MyNavLinks = () => {
   };
   window.addEventListener("scroll", changeBackground);
   // console.log(window.scrollY);
+
+  function renderMyProfileButton() {
+    const token = getLoginInfo()?.token;
+    if (token) {
+      return (
+        <NavLink to="/my-profile" style={{ marginRight: "10px" }}>
+          <Button className="btn btn-primary" onClick={() => navigate('my-profile')}>
+            My Profile
+          </Button>
+        </NavLink>
+      );
+    }
+    return null;
+  }
+
+
   return (
     <div className="header navbar-expand-lg navbar-light nav-bar shadow-5-strong  fixed-top ">
       {/* <nav className={navBar ? "navBar active" : "navbar"}> */}
@@ -89,6 +108,9 @@ const MyNavLinks = () => {
                 <SignUp></SignUp>
               </li>
             </ul>
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+  <li>{renderMyProfileButton()}</li>
+</ul>
           </div>
         </div>
       </nav>

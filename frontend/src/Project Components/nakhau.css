@@ -238,3 +238,47 @@ body {
   color: blue; /* Change the color to your preferred color */
   margin-bottom: 10px; /* Add spacing between the "Forgot Password?" section and the login button */
 }
+
+
+
+
+/* My profile CSS */
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-label {
+  font-weight: bold;
+}
+
+.profile-info {
+  margin-top: 5px;
+}
+
+.profile-button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}

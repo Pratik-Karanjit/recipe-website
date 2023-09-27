@@ -153,3 +153,9 @@ export let createUser = expressAsyncHandler(async (req, res, next) => {
     await Token.findByIdAndDelete(tokenId); 
     successResponse(res, HttpStatus.OK, "Password updated successfully");
   });
+
+  export let myProfile = expressAsyncHandler(async (req, res, next) => {
+    let id = req.info.id;
+    let result = await User.findById(id);
+    successResponse(res, HttpStatus.OK, "My-profile read successfully", result);
+  });
