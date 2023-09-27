@@ -117,6 +117,12 @@ function LoginForm({ handleClose }) {
     }
   };
 
+  const handleForgotPasswordClick = () => {
+    // Navigate to the "Forgot Password" page when the button is clicked
+    navigate('/forgot-password');
+    handleClose()
+  };
+
   return (
     <Formik
       initialValues={initialValues}
@@ -136,6 +142,16 @@ function LoginForm({ handleClose }) {
             <Field type="password" name="password" as={Form.Control} />
             <ErrorMessage name="password" component="div" className="error-message" />
           </Form.Group>
+
+          <button
+            type="button"
+            onClick={handleForgotPasswordClick}
+            style={{ color: 'blue', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
+          >
+            Forgot Password?
+          </button>
+
+          <br />
 
           <Button variant="primary" type="submit" disabled={isSubmitting}>
             Login
@@ -199,7 +215,6 @@ function SignUp() {
             <LoginForm handleClose={handleClose} />
           )}
         </Modal.Body>
-        <Modal.Footer>{/* Empty footer */}</Modal.Footer>
       </Modal>
     </>
   );
