@@ -18,7 +18,7 @@ const MyNavLinks = () => {
   window.addEventListener("scroll", changeBackground);
   // console.log(window.scrollY);
   return (
-    <div className="header navbar-expand-lg nav-bar shadow-5-strong  fixed-top ">
+    <div className="header navbar-expand-lg navbar-light nav-bar shadow-5-strong  fixed-top ">
       {/* <nav className={navBar ? "navBar active" : "navbar"}> */}
       {/* <nav
         className="navbar navbar-expand-lg nav-bar shadow-5-strong  fixed-top"
