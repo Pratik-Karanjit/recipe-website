@@ -13,6 +13,9 @@ import ForgotPassVerification from "./ForgotPassVerification";
 import ForgotPasswordReset from "./ForgotPasswordReset";
 import MyProfile from "./MyProfile";
 import UpdateProfile from "./UpdateProfile";
+import ChangeEmail from "./ChangeEmail";
+import ChangeEmailVerification from "./ChangeEmailVerification";
+import ChangeEmailPage from "./ChangeEmailPage";
 
 const MyRoutes = () => {
   return (
@@ -81,6 +84,9 @@ const MyRoutes = () => {
         <Route path="forgot-password-reset" element={<ForgotPasswordReset></ForgotPasswordReset>}querystring/>
         <Route path = "my-profile" element = {<MyProfile></MyProfile>}></Route>
         <Route path = "update-my-profile" element = {<UpdateProfile></UpdateProfile>}></Route>
+        <Route path ="change-email" element = {<ChangeEmail></ChangeEmail>}></Route>
+        <Route path ="change-email-verification" element = {<ChangeEmailVerification></ChangeEmailVerification>}></Route>
+        <Route path ="change-email-page" element = {<ChangeEmailPage></ChangeEmailPage>}></Route>
 
 
       </Routes>
