@@ -159,3 +159,54 @@ export let createUser = expressAsyncHandler(async (req, res, next) => {
     let result = await User.findById(id);
     successResponse(res, HttpStatus.OK, "My-profile read successfully", result);
   });
+
+  
+export let updateMyProfile = expressAsyncHandler(async (req, res, next) => {
+  let id = req.info.id;
+  let data = req.body;
+  delete data.email;
+  delete data.password;
+  delete data.isVerify;
+  let result = await User.findByIdAndUpdate(id, data, { new: true });
+  delete result._doc.password;
+  successResponse(res, HttpStatus.OK, "updated successfully", result);
+});
+
+export let updateEmail = expressAsyncHandler(async (req, res, next) => {  
+  let email=req.body.email      
+  let data= await User.findOne({email})   
+  let infoObj = {                       
+    id: data._id,                        
+    role: data.role,
+  };
+  let expireInfo = {                     
+    expiresIn: "1d",
+  };
+
+  let token = await generateToken(infoObj,expireInfo)    
+   await Token.create({token})                          
+   let link = `${baseUrl}/change-email-page?token=${token}`  
+   await sendMail({
+    from: '"Pakau" <pakau@gmail.com>',         
+    to: [data.email],
+    subject: "Email verification",
+    html: `<h1>
+    Verify Email 
+    <a href = "${link}">Click to verify</a>               
+    <h1>`,
+  });
+  successResponse(res, HttpStatus.OK, "Mail sent successfully");
+});
+
+
+export let updateEmailPage = expressAsyncHandler(async (req, res, next) => {
+  let id = req.info.id;
+  let tokenId = req.token.tokenId;
+
+  let email = req.body.email;
+  let data = { email: email };
+  let result = await User.findByIdAndUpdate(id, data, { new: true });
+
+  await Token.findByIdAndDelete(tokenId);
+  successResponse(res, HttpStatus.OK, "updated email successfully", result);
+});

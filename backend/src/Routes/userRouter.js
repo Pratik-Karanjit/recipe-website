@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUser, forgetPassword, loginUser, myProfile, resetPassword, verifyEmail } from "../controller/userController.js";
+import { createUser, forgetPassword, loginUser, myProfile, resetPassword, updateEmail, updateEmailPage, updateMyProfile, verifyEmail } from "../controller/userController.js";
 import isAuthenticatedForEmail from "../middleware/isAuthenticatedForEmail.js";
 import isAuthenticated from "../middleware/isAuthenticated.js";
 
@@ -17,6 +17,13 @@ userRouter.route("/forgot-password").get(forgetPassword);
 userRouter.route("/reset-password").patch(isAuthenticatedForEmail,resetPassword);
 
 userRouter.route("/my-profile").get(isAuthenticated,myProfile);
+
+userRouter.route("/update-my-profile").patch(isAuthenticated, updateMyProfile);
+
+userRouter.route("/change-email").patch(isAuthenticatedForEmail, updateEmail);
+
+userRouter.route("/change-email-page").patch(isAuthenticatedForEmail, updateEmailPage);
+
 
 
 export default userRouter;
