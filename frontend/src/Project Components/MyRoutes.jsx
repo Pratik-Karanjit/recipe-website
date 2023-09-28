@@ -12,6 +12,7 @@ import ForgotPassword from "./ForgotPassword";
 import ForgotPassVerification from "./ForgotPassVerification";
 import ForgotPasswordReset from "./ForgotPasswordReset";
 import MyProfile from "./MyProfile";
+import UpdateProfile from "./UpdateProfile";
 
 const MyRoutes = () => {
   return (
@@ -79,6 +80,8 @@ const MyRoutes = () => {
         <Route path = "forgot-password-verification" element = {<ForgotPassVerification></ForgotPassVerification>}></Route>
         <Route path="forgot-password-reset" element={<ForgotPasswordReset></ForgotPasswordReset>}querystring/>
         <Route path = "my-profile" element = {<MyProfile></MyProfile>}></Route>
+        <Route path = "update-my-profile" element = {<UpdateProfile></UpdateProfile>}></Route>
+
 
       </Routes>
     </div>
