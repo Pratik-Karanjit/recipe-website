@@ -4,6 +4,7 @@ import React from 'react';
 const ChangeEmailVerification = () => {
   return (
     <div className="container">
+      {/* qwerty */}
       <div className="box">
         <h1>
           We have sent you a verification mail. 
