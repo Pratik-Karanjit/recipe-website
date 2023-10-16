@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import SignUp from "./SignUp";
 import { Button } from "react-bootstrap";
-import { getLoginInfo } from "../utils/loginInfo";
+import { getLoginInfo, removeLoginInfo } from "../utils/loginInfo";
 
 const MyNavLinks = () => {
   let navigate = useNavigate()
@@ -34,6 +34,16 @@ const MyNavLinks = () => {
     }
     return null;
   }
+
+  const loginInfo = getLoginInfo();
+  // console.log(loginInfo)
+  const name = loginInfo?.name;
+  // console.log(name)
+
+  const handleLogoutClick = () => {
+    removeLoginInfo();
+    navigate('/login');
+  };
 
 
   return (
@@ -110,10 +120,29 @@ const MyNavLinks = () => {
               </li>
             </ul>)}
 
+            {getLoginInfo()?.token ? (
+                <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+                  <li>
+                  <button className="btn btn-primary">Logged in as <br></br>{name}</button>
+                  </li>
+                </ul>  ) : null}
+
+
+
+              
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
                <li>{renderMyProfileButton()}</li>
             </ul>
+                  
+                  
+            {getLoginInfo()?.token ? (  <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+                    <li>
+                  <button className="btn btn-primary" onClick={handleLogoutClick}>
+                    Logout
+                  </button>
+                    </li>
+                  </ul> ) : null}
           </div>
         </div>
       </nav>

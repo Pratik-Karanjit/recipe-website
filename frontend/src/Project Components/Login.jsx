@@ -23,8 +23,8 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:8000/users/login', values);
       const token = response.data.token;
-      setLoginInfo({token})
-      // console.log(response.data);
+      const name = response.data.name;
+        setLoginInfo({token, name})
       navigate('/');
     } catch (error) {
       console.log('Unable to submit:', error);

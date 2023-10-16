@@ -105,13 +105,16 @@ export let createUser = expressAsyncHandler(async (req, res, next) => {
           let infoObj = {
             id: data._id,
             role: data.role,
+            name: data.name,
           };
+          // console.log(infoObj);
           let expireInfo = {
             expiresIn: "365d",
           };
           let token = await generateToken(infoObj, expireInfo);    
           await Token.create({ token });            
-          res.json({ token }); 
+          res.json({ token, name: infoObj.name });
+
           successResponse(res, HttpStatus.CREATED, "Login Successfully", token);
         }
       }

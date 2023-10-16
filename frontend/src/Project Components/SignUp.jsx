@@ -108,8 +108,11 @@ function LoginForm({ handleClose }) {
     try {
       const response = await axios.post('http://localhost:8000/users/login', values);
       const token = response.data.token;
-      setLoginInfo({token})
-      navigate('/hello');
+    const name = response.data.name;
+    console.log("**************" , response.data)
+
+      setLoginInfo({token, name})
+      navigate('/');
     } catch (error) {
       console.log('Unable to submit:', error);
     } finally {
