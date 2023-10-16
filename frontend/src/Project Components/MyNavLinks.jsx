@@ -103,14 +103,17 @@ const MyNavLinks = () => {
               </button>
             </form> */}
 
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+
+            {getLoginInfo()?.token ? null : ( <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
               <li>
                 <SignUp></SignUp>
               </li>
-            </ul>
+            </ul>)}
+
+
             <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
-  <li>{renderMyProfileButton()}</li>
-</ul>
+               <li>{renderMyProfileButton()}</li>
+            </ul>
           </div>
         </div>
       </nav>
