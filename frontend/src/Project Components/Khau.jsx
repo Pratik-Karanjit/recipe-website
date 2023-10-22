@@ -1,5 +1,5 @@
 import React from "react";
-import "./nakhau.css"; // Add the import for your external CSS file
+import "./style.css"; // Add the import for your external CSS file
 import ItemCard from "./ItemCard";
 
 const data = {

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import "./navbar.css";
+import "./style.css";
 import SignUp from "./SignUp";
 import { Button } from "react-bootstrap";
 import { getLoginInfo, removeLoginInfo } from "../utils/loginInfo";
 
 const MyNavLinks = () => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   const [navBar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
   const changeBackground = () => {
@@ -26,7 +26,10 @@ const MyNavLinks = () => {
     if (token) {
       return (
         <NavLink to="/my-profile" style={{ marginRight: "10px" }}>
-          <Button className="btn btn-primary" onClick={() => navigate('my-profile')}>
+          <Button
+            className="btn btn-primary"
+            onClick={() => navigate("my-profile")}
+          >
             My Profile
           </Button>
         </NavLink>
@@ -42,9 +45,8 @@ const MyNavLinks = () => {
 
   const handleLogoutClick = () => {
     removeLoginInfo();
-    navigate('/login');
+    navigate("/login");
   };
-
 
   return (
     <div className="header navbar-expand-lg navbar-light nav-bar shadow-5-strong  fixed-top ">
@@ -113,36 +115,41 @@ const MyNavLinks = () => {
               </button>
             </form> */}
 
-
-            {getLoginInfo()?.token ? null : ( <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
-              <li>
-                <SignUp></SignUp>
-              </li>
-            </ul>)}
+            {getLoginInfo()?.token ? null : (
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+                <li>
+                  <SignUp></SignUp>
+                </li>
+              </ul>
+            )}
 
             {getLoginInfo()?.token ? (
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
-                  <li>
-                  <button className="btn btn-primary">Logged in as <br></br>{name}</button>
-                  </li>
-                </ul>  ) : null}
-
-
-
-              
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+                <li>
+                  <button className="btn btn-primary">
+                    Logged in as <br></br>
+                    {name}
+                  </button>
+                </li>
+              </ul>
+            ) : null}
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
-               <li>{renderMyProfileButton()}</li>
+              <li>{renderMyProfileButton()}</li>
             </ul>
-                  
-                  
-            {getLoginInfo()?.token ? (  <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
-                    <li>
-                  <button className="btn btn-primary" onClick={handleLogoutClick}>
+
+            {getLoginInfo()?.token ? (
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-3">
+                <li>
+                  <button
+                    className="btn btn-primary"
+                    onClick={handleLogoutClick}
+                  >
                     Logout
                   </button>
-                    </li>
-                  </ul> ) : null}
+                </li>
+              </ul>
+            ) : null}
           </div>
         </div>
       </nav>
