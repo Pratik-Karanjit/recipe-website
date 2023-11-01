@@ -458,4 +458,9 @@ body {
   visibility: visible;
 }
 
+.transparent-button {
+  background-color: transparent;
+  border: none;
+}
+
 /* end navbar */
