@@ -13,7 +13,6 @@ const ItemCard = (props) => {
             // style={{
             //   background: "orange",
             //   border: "none",
-
             // }}
           >
             Teach me!
