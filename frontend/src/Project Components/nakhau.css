@@ -1,130 +1,114 @@
-.row{
-    /* height: 30px; */
-    padding-left: 10px;
-     margin-top: -40vh;
-
+.row {
+  /* height: 30px; */
+  padding-left: 10px;
 }
-.card button{
-    background-color: orange;
-    border:none;
-    width: 100%;
+.card button {
+  background-color: orange;
+  border: none;
+  width: 100%;
 }
-.card-title{
-    color: #4E598C;
-    font-style: bold;
-    
+.card-title {
+  color: #4e598c;
+  font-style: bold;
 }
-.card-text{
-    color:#4E598C ;
-    font-style: bold;
-    font-weight: 600;
-}
-.card{
-    border-color: orange;
-    border-radius: 50px;
-    overflow: hidden;
-    
+.card-text {
+  color: #4e598c;
+  font-style: bold;
+  font-weight: 600;
 }
 .card {
-    width:100%;
-    transition:scale 400ms
+  border-color: orange;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.card {
+  width: 100%;
+  transition: scale 400ms;
 }
 .card:hover {
-    scale:106%
+  scale: 106%;
 }
-.btn{
-    font-style: bold;
-    font-weight: 600;
+.btn {
+  font-style: bold;
+  font-weight: 600;
 }
 
-@media(max-width: 767px){
-    .row{
-      min-height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 10vh;
-      margin-left: 70px;
-    }
-  
-  
+@media (max-width: 767px) {
+  .row {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-left: 70px;
   }
+}
 
+/*REGISTRATION CSS*/
+.registration-success-container {
+  max-width: 400px;
+  margin: 100px auto; /* Adjust the margin-top value as needed */
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
 
+.registration-success-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
+.registration-success-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 
-  /*REGISTRATION CSS*/
-  .registration-success-container {
-    max-width: 400px;
-    margin: 100px auto; /* Adjust the margin-top value as needed */
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .registration-success-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .registration-success-message {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
+/*VERIFY EMAIL CSS */
+.verify-email-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
 
+.verify-email-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
+.verify-email-status {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 
-  /*VERIFY EMAIL CSS */
-  .verify-email-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .verify-email-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .verify-email-status {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .verify-email-button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .verify-email-button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Add transition for smooth effect */
-  }
-  
-  .verify-email-button:hover {
-    background-color: #45a049; /* Change background color on hover */
-  }
-  
-  .verify-email-button:active {
-    background-color: #3d8b3d; /* Change background color when button is clicked */
-  }
-  
-  
+.verify-email-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.verify-email-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth effect */
+}
 
+.verify-email-button:hover {
+  background-color: #45a049; /* Change background color on hover */
+}
 
+.verify-email-button:active {
+  background-color: #3d8b3d; /* Change background color when button is clicked */
+}
 
 /* Forgot password css */
 .container {
@@ -150,8 +134,6 @@
   font-size: 24px;
   margin-bottom: 20px;
 }
-
-
 
 /* CSS for Form Container */
 .form-container {
@@ -238,9 +220,6 @@ body {
   color: blue; /* Change the color to your preferred color */
   margin-bottom: 10px; /* Add spacing between the "Forgot Password?" section and the login button */
 }
-
-
-
 
 /* My profile CSS */
 

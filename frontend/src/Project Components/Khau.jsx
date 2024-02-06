@@ -11,12 +11,12 @@ const data = {
     },
     {
       name: "Thukpa",
-      image: "momo.png", // Change the image URLs as needed
+      image: "thukpaaa.png", // Change the image URLs as needed
       desc: "Dish that will make you warm and cozy in the rain",
     },
     {
       name: "Chatamari",
-      image: "momo.png",
+      image: "chatamari.png",
       desc: "Rice dough based pizza from the newar",
     },
     // {
