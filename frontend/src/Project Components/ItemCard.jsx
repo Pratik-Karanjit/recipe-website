@@ -1,5 +1,5 @@
 import React from "react";
-import "./nakhau.css";
+import "./style.css";
 const ItemCard = (props) => {
   return (
     <div className="col-10 col-md-6 col-lg-3 mx-1 mb-4 w-4 p-4">

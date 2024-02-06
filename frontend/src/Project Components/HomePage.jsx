@@ -1,6 +1,5 @@
 import React from "react";
-import "./navbar.css";
-import "./home.css";
+import "./style.css";
 // import ItemCard from "./ItemCard";
 import Khau from "./Khau";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

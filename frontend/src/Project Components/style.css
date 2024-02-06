@@ -1,0 +1,466 @@
+/* Home */
+
+.homePage{
+    background-size: cover;
+    min-height: 50vh;
+    position: relative;
+  }
+  
+.color-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(56, 55, 55), rgba(214, 205, 205, 0));
+
+}
+.background{
+  height: 105vh; /* set the height of the div */
+  background-position: center;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.background::before{
+  background-image: url("/public/restbg.jpg");
+  background-size: cover;
+  content:'';
+  position:absolute;
+  inset: 0;
+  /* inset has same multi-value syntax of the margin shorthand */
+  opacity: 0.1;
+
+}
+
+/* .background::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+.search{
+  position: absolute;
+  width: 10%;
+  height:10%;
+  padding-top: 35vh;
+}
+.heading{
+  color:#4E598c;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 0 100vh;
+  position: absolute;
+ 
+  
+}
+
+    
+@media(max-width: 767px){
+  .homePage{
+    min-height: 50vh;
+  }
+  .search{
+    padding-top: 16vh;
+  }
+  .logs{
+    height: 50vh;
+    padding-bottom: 16vh;
+  }
+  .background{
+    height: fit-content;
+  }
+  .heading{
+    margin-top: -50vh;
+  }
+}
+
+/* End Home */
+
+
+/* nakhau */
+.row{
+    /* height: 30px; */
+    padding-left: 10px;
+     margin-top: -40vh;
+
+}
+.card button{
+    background-color: orange;
+    border:none;
+    width: 100%;
+}
+.card-title{
+    color: #4E598C;
+    font-style: bold;
+    
+}
+.card-text{
+    color:#4E598C ;
+    font-style: bold;
+    font-weight: 600;
+}
+.card{
+    border-color: orange;
+    border-radius: 50px;
+    overflow: hidden;
+    
+}
+.card {
+    width:100%;
+    transition:scale 400ms
+}
+.card:hover {
+    scale:106%
+}
+.btn{
+    font-style: bold;
+    font-weight: 600;
+}
+
+@media(max-width: 767px){
+    .row{
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 10vh;
+      margin-left: 70px;
+    }
+  
+  
+  }
+
+
+
+
+  /*REGISTRATION CSS*/
+  .registration-success-container {
+    max-width: 400px;
+    margin: 100px auto; /* Adjust the margin-top value as needed */
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .registration-success-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .registration-success-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+
+
+
+  /*VERIFY EMAIL CSS */
+  .verify-email-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .verify-email-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .verify-email-status {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .verify-email-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .verify-email-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+  }
+  
+  .verify-email-button:hover {
+    background-color: #45a049; /* Change background color on hover */
+  }
+  
+  .verify-email-button:active {
+    background-color: #3d8b3d; /* Change background color when button is clicked */
+  }
+  
+  
+
+
+
+/* Forgot password css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f5f5f5;
+}
+
+.box {
+  width: 400px;
+  padding: 20px;
+  margin-top: 2px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.box h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+
+/* CSS for Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 45px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* CSS for Form Title */
+.form-title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* CSS for Form Input Fields */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CSS for Form Select Field */
+.form-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CSS for Submit Button */
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* CSS for Error Messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* CSS for spacing between form elements */
+.form-element-spacing {
+  margin-top: 15px;
+}
+
+/* CSS for additional padding and finishing touch */
+.form-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.form-input,
+.form-select {
+  padding: 12px;
+}
+
+.form-button {
+  padding: 12px 20px;
+}
+
+body {
+  background-color: #f3f6ff; /* Light-colored background */
+}
+.forgot-password {
+  color: blue; /* Change the color to your preferred color */
+  margin-bottom: 10px; /* Add spacing between the "Forgot Password?" section and the login button */
+}
+
+
+
+
+/* My profile CSS */
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-label {
+  font-weight: bold;
+}
+
+.profile-info {
+  margin-top: 5px;
+}
+
+.profile-button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* end nakhau */
+
+/* navbar */
+.nav-link{
+    transition: all 0.1s;
+    font-weight: bold;
+    
+
+}
+.nav-link:hover{
+    border-bottom: 2px solid black;
+  
+}
+.nav-link {
+    color: rgb(26, 9, 9);
+    margin-right: 130px;
+    text-decoration: none; 
+    font-size: 16px; 
+    color: white;
+  
+  }
+.navbar-nav li a {
+    color: rgb(0, 0, 0);
+    margin-right: 20px;
+    text-decoration: none; 
+    font-size: 16px; 
+    color: white;
+  }
+/* .collapse{
+  background-color: transparent;
+}
+.collapse.active{
+  background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
+} */
+
+/* .hidenav.active{
+  background: linear-gradient(90deg,rgb(66,2,194)0%,rgb(0,78,194)100%);
+  
+} */
+/* .anibar{
+  background-color: transparent;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: sticky;
+ /* top: 0; */
+ /* z-index: 999; */
+
+/* } */ 
+/* .collapse{
+  background-color: black;
+} */
+/* .anibar.active{
+  background-color:#4E598C;
+  /* background-image: url("/public/Pakau.svg"); */
+/* } */ 
+/* .collapse.active{
+  background-color: red;
+} */
+/* .navBar a.active {
+    border-bottom-color: white;
+} */
+ 
+/* .header{
+  background-color: black;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 999;
+
+} */
+/* .header.active{
+  background-color:#4E598C;
+} */
+  .navbar{
+   
+      background-color: transparent;
+   
+  }
+ .navbar.active{
+  background-color:#4E598C;
+}
+.logo{
+  visibility: hidden;
+}
+.logo.active{
+  visibility: visible;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+}
+
+/* end navbar */
