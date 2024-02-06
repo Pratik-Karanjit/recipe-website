@@ -14,6 +14,11 @@
     rgba(214, 205, 205, 0)
   );
 }
+
+.color-overlay img {
+  height: 300px;
+}
+
 .background {
   background-position: center;
   position: relative;
